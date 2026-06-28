@@ -21,11 +21,11 @@ public class Main {
                         menuInsercao(con);
                         break;
                     case 2: 
-                        // Aqui chamaremos a lógica de DELETE
+                        
                         menuRemocao(con);
                         break;
                     case 3: 
-                        // Chama o nosso novo Controller que varre tudo!
+                        
                         new RelatorioController().listarTudo(con); 
                         break;
                     case 4: 
