@@ -1,7 +1,7 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Date; // Importante: usar o Date do pacote SQL
+import java.sql.Date;
 
 public class PessoaModel {
     public static void create(PessoaBean p, Connection con) throws SQLException {
@@ -11,7 +11,7 @@ public class PessoaModel {
             st.setString(2, p.getNome());
             st.setString(3, p.getCpf());
             
-            // Converte a String (AAAA-MM-DD) para o formato de data do banco
+
             st.setDate(4, Date.valueOf(p.getDataNascimento())); 
             
             st.execute();
